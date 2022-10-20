@@ -1,12 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { SafeAreaView, Text, StyleSheet } from 'react-native';
+import type { RandomImagesJSON, RandomImagesJSON2 } from './types';
+
+const data = require('./random-images.json') as RandomImagesJSON[];
+const data2 = require('./random-images-2.json') as RandomImagesJSON2[];
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text style={{ fontSize: 24 }}>My Instagram</Text>
+    </SafeAreaView>
   );
 }
 
